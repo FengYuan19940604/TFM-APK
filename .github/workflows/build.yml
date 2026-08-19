@@ -16,6 +16,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y git zip unzip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libffi-dev cmake libssl-dev
       - name: 打包 APK
+        env:
+          ANDROID_ACCEPT_SDK_LICENSE: "yes"
         run: buildozer android debug
       - name: 上传 APK
         uses: actions/upload-artifact@v4
