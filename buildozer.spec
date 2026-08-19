@@ -13,7 +13,7 @@ version = 1.0
 # 依赖（Python 3.12 + kivy + numpy）
 # Python 必须 3.12：p4a 默认 3.14 太新，numpy 1.26.4 只支持到 Python 3.12
 # numpy 版本号加 v 前缀：master 分支用 git checkout {version}，numpy tag 是 v1.26.4
-requirements = python3==3.12.7,hostpython3==3.12.7,kivy==2.3.0,numpy==v1.26.4
+requirements = python3==3.11.9,hostpython3==3.11.9,kivy==2.3.0,numpy==v1.26.4
 
 # 用 master 分支（源码编译 numpy，不依赖 pip 下载 android wheel）
 # develop 分支的 numpy recipe 用 pip 下载 wheel，但 numpy 1.26.4 无 android wheel
