@@ -37,6 +37,7 @@ orientation = portrait
 
 # 允许后台线程运行
 android.allow_backup = True
+android.accept_sdk_license = True
 
 [buildozer]
 log_level = 2
