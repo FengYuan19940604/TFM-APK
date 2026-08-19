@@ -1,0 +1,24 @@
+name: Build APK
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: 安装依赖
+        run: |
+          pip install --upgrade buildozer cython
+          sudo apt-get update
+          sudo apt-get install -y git zip unzip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libffi-dev cmake libssl-dev
+      - name: 打包 APK
+        run: buildozer android debug
+      - name: 上传 APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: tfm-apk
+          path: bin/*.apk
