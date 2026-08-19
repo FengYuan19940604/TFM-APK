@@ -14,7 +14,7 @@ version = 1.0
 requirements = python3,kivy==2.3.0,numpy==1.26.4
 
 # numpy 需要 C 编译，启用 Cython 支持
-p4a.branch = master
+p4a.branch = develop
 
 # 不打包不需要的
 source.exclude_dirs = .git,__pycache__
