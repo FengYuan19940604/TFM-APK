@@ -31,6 +31,7 @@ android.archs = arm64-v8a
 # 最低/目标 SDK
 android.api = 30
 android.minapi = 24
+android.ndk = 25c
 
 # 主程序入口
 entrypoint = main
