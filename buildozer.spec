@@ -11,7 +11,7 @@ source.include_patterns = *.py
 version = 1.0
 
 # 依赖（kivy + numpy）
-requirements = python3,kivy==2.3.0,numpy==1.26.4
+requirements = python3,kivy==2.3.0,numpy==v1.26.4
 
 # numpy 需要 C 编译，启用 Cython 支持
 p4a.branch = develop
